@@ -1,0 +1,18 @@
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# Python Cache & Virtual Environments
+__pycache__/
+*.py[cod]
+.venv/
+
+# Lab archives & Cloud Shell readme
+*.tar.gz
+*.zip
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
