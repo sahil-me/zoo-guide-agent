@@ -8,7 +8,7 @@ __pycache__/
 *.py[cod]
 .venv/
 
-# Lab archives & Cloud Shell readme
+# Lab archives
 *.tar.gz
 *.zip
 
