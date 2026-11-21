@@ -179,6 +179,86 @@ The repository organizes the agent module, MCP server/client code, dependency fi
 
 This section showcases **Zoo Guide Agent** in action, including CLI/agent interactions, MCP server/client runs, and Google Cloud / Cloud Run views.
 
+### Agent Development Kit (ADK) Web UI
+
+<img width="1366" height="768" alt="Agent Development Kit (ADK)" src="https://github.com/user-attachments/assets/ce4b810b-bf22-430f-a7c1-cd5af52df049" />
+<img width="1366" height="768" alt="Agent Development Kit (ADK) Web UI" src="https://github.com/user-attachments/assets/14c86f7e-05cd-44d4-abdd-b2937cd974db" />
+
+### Google Cloud Console Dashboard
+
+<img width="1366" height="768" alt="Google Cloud Console Dashboard" src="https://github.com/user-attachments/assets/9b30b17b-eb6d-4e50-b8d2-bca24a6d5497" />
+
+### Cloud Shell Terminal
+
+<img width="1366" height="768" alt="ADK Agent and MCP Tool Execution Logs" src="https://github.com/user-attachments/assets/4d053070-f89e-4f11-911b-9780137de475" />
+<img width="1366" height="768" alt="Cloud Run Deployment in Progress" src="https://github.com/user-attachments/assets/b15a81d6-4734-4724-a433-83bd64c53f56" />
+<img width="1366" height="768" alt="Cloud Run Deployment Complete and Service URL" src="https://github.com/user-attachments/assets/21ae24a5-fa8e-4812-a0aa-bb95d4a28813" />
+<img width="1366" height="768" alt="Python Dependency Installation - 1" src="https://github.com/user-attachments/assets/2706042a-f4cf-45f0-9c47-bb5dd980ac51" />
+<img width="1366" height="768" alt="Python Dependency Installation - 2" src="https://github.com/user-attachments/assets/763ee8ac-d587-4373-91ec-b26524829a88" />
+<img width="1366" height="768" alt="Python Dependency Installation - 3" src="https://github.com/user-attachments/assets/07176118-a31f-4503-a3f2-41c884118da7" />
+<img width="1366" height="768" alt="Local ADK Web Server Startup" src="https://github.com/user-attachments/assets/16e1f656-a9cc-44e6-b556-1888fda4936b" />
+<img width="1366" height="768" alt="Local ADK Web Server shut down" src="https://github.com/user-attachments/assets/d7a47e7e-4f34-4524-84c5-4c6d4e8702df" />
+
+### ADK Agent Workflow Graph
+
+<img width="551" height="215" alt="ADK Sequential Agent Workflow Graph - Response Formatter Active" src="https://github.com/user-attachments/assets/10e99b81-a9bb-4985-a1ff-87b0872396a7" />
+<img width="555" height="214" alt="ADK Sequential Agent Workflow Graph - Comprehensive Researcher Active" src="https://github.com/user-attachments/assets/3cf72861-73c2-41eb-805e-b9e854f5d927" />
+
+### FastMCP 2.0 Server
+
+<img width="1366" height="768" alt="FastMCP 2.0 Zoo Animal Data MCP Server Running on HTTP" src="https://github.com/user-attachments/assets/db4e78af-476f-4aaa-b7d4-5d147d171573" />
+<img width="1366" height="768" alt="FastMCP Server Handling CallToolRequest and ListToolsRequest" src="https://github.com/user-attachments/assets/d95fe84e-be2a-4612-9edd-9e1f1d6d9214" />
+
+### Antigravity CLI & MCP Tool Execution
+
+<img width="1366" height="768" alt="Antigravity CLI Active MCP Servers and Zoo Remote Tools" src="https://github.com/user-attachments/assets/e38e723a-84fb-4c51-9733-3067ec590e1e" />
+<img width="1366" height="767" alt="Antigravity CLI Querying Penguins via Zoo Remote MCP Tool" src="https://github.com/user-attachments/assets/1a3035fa-696f-471a-afd5-a749673c7acf" />
+<img width="1366" height="768" alt="Antigravity CLI Slash Command and Lion Zoo Information Output" src="https://github.com/user-attachments/assets/cf4644cf-70b9-407d-9d16-fc824e60e728" />
+
+### Project Source Code
+
+<img width="1366" height="768" alt="Project Source Code - zoo_guide_agent/agent.py" src="https://github.com/user-attachments/assets/bcb8b66b-ec3a-478f-b74a-20f0f05c869c" />
+<img width="1366" height="768" alt="Project Source Code - mcp-on-cloudrun/server.py" src="https://github.com/user-attachments/assets/694c13b6-db1b-48d4-958e-538ea516dbce" />
+
+### ADK Web UI — Agent Conversations, Traces & Events
+
+#### Bears Query
+
+<img width="1366" height="768" alt="Bears Query - 1" src="https://github.com/user-attachments/assets/61ba1fa7-f730-4a19-9dcc-aec02c02b954" />
+<img width="1366" height="768" alt="Bears Query - 2" src="https://github.com/user-attachments/assets/0341cce7-8a08-470a-9ae9-61f7e2f11e9e" />
+<img width="1366" height="768" alt="Bears Query - 3" src="https://github.com/user-attachments/assets/397a2919-7715-48aa-9dba-62256385a102" />
+<img width="1366" height="768" alt="Bears Query - 4" src="https://github.com/user-attachments/assets/6320e5da-dd99-4213-8a81-2ff06ce439c6" />
+<img width="1366" height="768" alt="Bears Query - 5" src="https://github.com/user-attachments/assets/15125814-ccaf-4f74-844f-317aebc72525" />
+<img width="1366" height="768" alt="Bears Query - 6" src="https://github.com/user-attachments/assets/8fa9d888-a34d-4ce4-b1ad-07e91005a885" />
+<img width="1366" height="768" alt="Bears Query - 7" src="https://github.com/user-attachments/assets/c6dba5bc-7da6-49ad-9ad1-90b5ceb65b17" />
+
+#### Elephants Query
+
+<img width="1366" height="766" alt="Elephants Query - 1" src="https://github.com/user-attachments/assets/82880618-ad67-45a2-b0f3-ecb062d32d94" />
+<img width="1366" height="768" alt="Elephants Query - 2" src="https://github.com/user-attachments/assets/233f7375-a5cc-4450-8531-8fdbdef2bc04" />
+<img width="1366" height="768" alt="Elephants Query - 3" src="https://github.com/user-attachments/assets/5ccdd9fc-15ef-41fd-9988-42d7905d3c3c" />
+<img width="1366" height="767" alt="Elephants Query - 4" src="https://github.com/user-attachments/assets/cd242b48-d738-4a7f-a00f-a101ed63725c" />
+<img width="686" height="462" alt="Elephants Query - 5" src="https://github.com/user-attachments/assets/df6f9bb1-6897-485c-b72f-77a97a72f517" />
+<img width="682" height="606" alt="Elephants Query - 6" src="https://github.com/user-attachments/assets/05fc536f-8369-4b75-8829-eba146352ab2" />
+
+#### Tigers Query
+
+<img width="1366" height="768" alt="Tigers Query - 1" src="https://github.com/user-attachments/assets/68048055-6d33-4e0b-a4b8-48e95b2afad7" />
+<img width="1366" height="768" alt="Tigers Query - 2" src="https://github.com/user-attachments/assets/9cc4eaea-6486-4b43-ac7b-67c4edccd743" />
+<img width="1366" height="768" alt="Tigers Query - 3" src="https://github.com/user-attachments/assets/13887ccf-0372-4c0c-9873-d848caeeb7ac" />
+<img width="1366" height="768" alt="Tigers Query - 4" src="https://github.com/user-attachments/assets/27d2c50a-ae66-48fb-8fde-2c7df4086518" />
+
+### Google Cloud Run Service & Logs
+
+<img width="1366" height="768" alt="Cloud Run Overview - active services" src="https://github.com/user-attachments/assets/6d5d161b-4b69-45f9-b740-e75ecb18169c" />
+<img width="1366" height="768" alt="Cloud Run Services" src="https://github.com/user-attachments/assets/cb78f7f2-7cd4-4898-98fd-b7b42b66a8a7" />
+<img width="1366" height="768" alt="Observability Metrics - 1" src="https://github.com/user-attachments/assets/d434c9b5-43f1-45d7-a8f3-2c583bcc418c" />
+<img width="1366" height="768" alt="Observability Metrics - 2" src="https://github.com/user-attachments/assets/b518a5ae-db73-4f0d-9cc4-cdeda279d75b" />
+<img width="1366" height="768" alt="Observability Metrics - 3" src="https://github.com/user-attachments/assets/61a03e5a-8acf-47a6-8663-1f7ec3e6920a" />
+<img width="1366" height="768" alt="Observability Metrics - 4" src="https://github.com/user-attachments/assets/5990cf2d-5a61-41cc-8f48-8f61f141cc03" />
+<img width="1366" height="768" alt="Service Logs" src="https://github.com/user-attachments/assets/103bb553-8831-41b6-9f65-4dd6b3f7bd82" />
+<img width="1366" height="768" alt="Logs Explorer" src="https://github.com/user-attachments/assets/95a99268-2404-4c03-afc6-cd06fdb26ea0" />
+
 ---
 
 ## Generative AI Capabilities & Integration
