@@ -1,4 +1,4 @@
-# 🤖 Zoo Guide Agent 🦁🐧🐻
+# 🤖 Zoo Guide Agent 🐻🐘🦁🐧
 
 https://github.com/user-attachments/assets/14855b8e-f39b-497c-90bc-f3ac24d85031
 
@@ -98,18 +98,43 @@ flowchart TD
 
 ## Project Structure
 
-The repository organizes the agent module, MCP server/client code, dependency files, and configuration assets into a structured layout.
+The repository organizes the workspace directory, MCP server module, ADK agent package, and project governance files into a clean layout.
+
+```text
+zoo-guide-agent/                                   # Repository root directory
+├── zoo_guide_agent/                               # Workspace project folder
+│   ├── mcp-on-cloudrun/                           # MCP server, local client script, and container setup
+│   │   ├── Dockerfile                             # Container build configuration for Cloud Run
+│   │   ├── local_mcp_call.py                      # Local test/invocation client for MCP tool calls
+│   │   ├── pyproject.toml                         # Project metadata and `uv` / Python dependencies
+│   │   ├── server.py                              # FastMCP server implementation and zoo animal tools
+│   │   └── uv.lock                                # Locked dependency versions for reproducible builds
+│   │
+│   ├── zoo_guide_agent/                           # Core Zoo Guide ADK Agent package
+│   │   ├── __init__.py                            # Package initialization module
+│   │   ├── agent.py                               # Multi-agent workflow, instructions, and tool wiring
+│   │   └── requirements.txt                       # Pip dependency list for the ADK agent environment
+│   │
+│   └── README-cloudshell.txt                      # Default Google Cloud Shell environment reference file
+│
+├── .gitignore                                     # Excludes secrets, caches, virtual envs, and OS files
+├── CODE_OF_CONDUCT.md                             # Community conduct guidelines
+├── CONTRIBUTING.md                                # Contribution workflows and guidelines
+├── LICENSE                                        # Open-source license terms (Apache-2.0)
+├── README.md                                      # Project documentation
+└── SECURITY.md                                    # Security vulnerability reporting policy
+```
 
 > [!NOTE]
-> This tree represents the repository file layout. Refer to `mcp-on-cloudrun/` and `zoo_guide_agent/` for implementation details.
+> This tree mirrors the exact repository structure on GitHub. Refer to `zoo_guide_agent/mcp-on-cloudrun/` and `zoo_guide_agent/zoo_guide_agent/` for component implementations.
 
 ### Key Components
 
-- **`zoo_guide_agent/`** — Contains the agent entry point (`agent.py`), package initializer (`__init__.py`), and requirements.txt.
-- **`mcp-on-cloudrun/`** — Contains the MCP server (`server.py`), local MCP invocation script (`local_mcp_call.py`), `pyproject.toml`, `uv.lock`, and `Dockerfile`.
-- **`Dockerfile`** — Defines the container image for deploying services to Google Cloud Run.
-- **`.gitignore`** — Keeps `.env` files, secrets, virtual environments (`.venv/`), and Python bytecode caches (`__pycache__/`) out of version control.
-- **`CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, and `SECURITY.md`** — Outline contribution standards, community conduct, and security-reporting guidelines.
+- **`zoo_guide_agent/mcp-on-cloudrun/`** — Contains the FastMCP server (`server.py`), local MCP test script (`local_mcp_call.py`), `Dockerfile`, `pyproject.toml`, and `uv.lock`.
+- **`zoo_guide_agent/zoo_guide_agent/`** — Contains the ADK sequential agent workflow (`agent.py`), package initializer (`__init__.py`), and `requirements.txt`.
+- **`README-cloudshell.txt`** — Default Cloud Shell workspace readme included from the lab environment.
+- **`.gitignore`** — Excludes `.env` files, credentials, virtual environments (`.venv/`), and Python caches (`__pycache__/`) from version control.
+- **`CONTRIBUTING.md, CODE_OF_CONDUCT.md, and SECURITY.md`** — Outline contribution standards, community conduct, and security-reporting guidelines.
 
 ---
 
