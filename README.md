@@ -50,19 +50,21 @@ The following diagram illustrates the architecture of **Zoo Guide Agent**, conne
 
 ```mermaid
 flowchart TD
-    U["User / Client Prompt"] -->|" Query "| A["Zoo Guide Agent (ADK)"]
+    U["User / Client Prompt"] -->|" Query "| A["Zoo Guide Agent (ADK)<br/>tour_guide_workflow"]
 
-    A --> G["Model<br>Gemini"]
+    A --> G["Model<br/>Gemini"]
     A --> M["MCP Client / Tool Call"]
+    A --> BT["Built-in Tools<br/>(Wikipedia / Google Search)"]
 
-    subgraph MCPSvc ["mcp-on-cloudrun"]
-        M --> S["MCP Server (server.py)"]
-        S --> T["Zoo & Domain Tools"]
+    subgraph MCPSvc ["mcp-on-cloudrun (Google Cloud Run)"]
+        M -->|" Streamable-HTTP /mcp "| S["FastMCP Server<br/>(server.py)"]
+        S --> T["Zoo Animal Tools<br/>(fetch_animals_by_species, etc.)"]
     end
 
-    S --> CR["Google Cloud Run"]
-    T -->|" Tool results "| G
-    G -->|" Final response "| U
+    BT -->|" Tool results "| A
+    T -->|" Tool results "| A
+    G <-->|" Reasoning & synthesis "| A
+    A -->|" Final response "| U
 
     classDef user fill:#e8f0fe,stroke:#4285f4,color:#202124
     classDef app fill:#e6f4ea,stroke:#34a853,color:#202124
@@ -72,9 +74,9 @@ flowchart TD
 
     class U user
     class S,CR app
-    class G gcp
+    class G,MCPSvc gcp
     class A agent
-    class M,T tool
+    class M,T,BT tool
 ```
 
 > [!NOTE]
@@ -83,16 +85,16 @@ flowchart TD
 ### Architecture Overview
 
 1. **User / Client Prompt**
-   - Sends natural language zoo guide questions and prompts to the agent workflow.
+   - Sends natural language zoo guide questions and prompts (such as locating animals or exhibit details) to the agent workflow.
 
-2. **Zoo Guide Agent**
-   - Orchestrates reasoning, intent understanding, and tool selection using agent logic (`agent.py`) and Gemini models.
+2. **Zoo Guide Agent (`tour_guide_workflow`)**
+   - Orchestrates multi-step reasoning, sub-agent routing (`greeter`, `comprehensive_researcher`, `response_formatter`), and tool selection using `agent.py` and Gemini models.
 
-3. **MCP Server & Client**
-   - Exposes and invokes tools via Model Context Protocol (`server.py` and `local_mcp_call.py`) for both local testing and remote/Cloud Run execution.
-  
+3. **MCP Server & Tool Integration (`mcp-on-cloudrun`)**
+   - Exposes zoo animal tools via Model Context Protocol (`server.py` and `local_mcp_call.py`) alongside built-in tools (`wikipedia`, `google_search`) for local testing and remote execution.
+
 4. **Google Cloud Run & Gemini**
-   - Hosts containerized services (`Dockerfile`) and provides Gemini model reasoning to synthesize tool outputs into clear responses.
+   - Hosts containerized services (`Dockerfile`) on Google Cloud Run (`europe-west4`) while Gemini provides model reasoning and response synthesis from tool outputs.
   
 ---
 
