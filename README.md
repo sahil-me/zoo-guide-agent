@@ -1,6 +1,6 @@
 # 🤖 Zoo Guide Agent 🦁🐧🐻
 
-
+https://github.com/user-attachments/assets/14855b8e-f39b-497c-90bc-f3ac24d85031
 
 > 🎥 Watch **Zoo Guide Agent** in action! 🐾
 
@@ -175,7 +175,7 @@ The repository organizes the agent module, MCP server/client code, dependency fi
 
 --- 
 
-## Screenshot
+## Screenshots
 
 This section showcases **Zoo Guide Agent** in action, including CLI/agent interactions, MCP server/client runs, and Google Cloud / Cloud Run views.
 
