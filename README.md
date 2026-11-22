@@ -174,31 +174,31 @@ zoo-guide-agent/                                   # Repository root directory
 
 ## Application Workflow
 
-**Zoo Guide Agent** is structured around clear environment setup, MCP tool orchestration, and response synthesis.
+**Zoo Guide Agent** is structured around clear environment setup, MCP tool orchestration, sequential agent execution, and response synthesis
 
 ### 1️⃣ Environment & Dependency Setup
 
-- Configure required environment variables (such as Google Cloud project ID, location/region, or API keys) in a local `.env` file without committing secrets.
-- Install dependencies using `uv sync` or `pip install -r zoo_guide_agent/requirements.txt`.
+- Configure required environment variables (such as Google Cloud project ID, region, or model settings) in a local `.env` file while keeping `.env` out of version control.
+- Install dependencies using `uv sync` (in `zoo_guide_agent/mcp-on-cloudrun/`) or `pip install -r zoo_guide_agent/zoo_guide_agent/requirements.txt`.
 
 ### 2️⃣ MCP Server & Local Testing
 
-- Run or verify MCP tool execution using `mcp-on-cloudrun/server.py` and `mcp-on-cloudrun/local_mcp_call.py`.
+- Run or verify MCP tool execution using `zoo_guide_agent/mcp-on-cloudrun/server.py` and `zoo_guide_agent/mcp-on-cloudrun/local_mcp_call.py`.
 - Confirm tool schemas, responses, and error handling work as expected.
 
 ### 3️⃣ Agent Query & Tool Routing
 
-- Send a prompt to the agent (for example, `"Where can I find penguins?"`).
-- The agent and Gemini model evaluate the request and invoke relevant MCP tools when needed.
+- Send a prompt to the agent (for example, `"Where can I find penguins?"`) via `adk web` or Antigravity CLI.
+- The sequential agent workflow (`tour_guide_workflow` with `greeter`, `comprehensive_researcher`, and `response_formatter`) and Gemini model evaluate the request and invoke MCP zoo tools (`fetch_animals_by_species`, `fetch_animal_details`) along with built-in tools (`wikipedia`, `google_search`) when needed.
 
 ### 4️⃣ Containerization & Cloud Run Deployment
 
-- Build the container image using `mcp-on-cloudrun/Dockerfile`.
-- Deploy to Google Cloud Run with required environment settings and IAM permissions.
+- Build the container image using `zoo_guide_agent/mcp-on-cloudrun/Dockerfile`.
+- Deploy services to Google Cloud Run (such as `coding-zoo-mcp-server` and `coding-zoo-tour-guide` in `europe-west4`) with required environment configuration and IAM permissions.
 
 ### 5️⃣ Response Synthesis
 
-- Tool outputs are returned to the Gemini model and formatted into a clear final response for the user.
+- Tool outputs are returned to the agent and Gemini model, then synthesized into a structured, conversational response for the user.
 
 --- 
 
