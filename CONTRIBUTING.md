@@ -307,4 +307,5 @@ Contributors interested in improving agent workflows, MCP integrations, cloud de
 
 If you are interested in contributing at a deeper level, consistently submitting meaningful improvements, reviewing Pull Requests, improving documentation, or helping maintain the project, feel free to get involved and collaborate.
 
-Thank you for contributing to **Zoo Guide Agent**! 🦁🐧🐻
+Thank you for contributing to **Zoo Guide Agent**! 🐾
+
